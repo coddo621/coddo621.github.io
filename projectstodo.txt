@@ -1,0 +1,106 @@
+<script lang="ts">
+    import shape from "$lib/assets/shape.png"
+    import mpp from "$lib/assets/mpp.png"
+    import dg from "$lib/assets/dg.png"
+
+    const shape_url = "https://github.com/coddo621/Shape"
+    const mpp_url = "https://github.com/coddo621/MusicPlayerPy"
+    const dg_url = "https://github.com/Dionysus-Games"
+    const dr_url = "https://github.com/DOminikRogic"
+</script>
+
+<style>
+    .projects {
+        margin: auto;
+    }
+
+    .projects img {
+        height: 50vh;
+        margin: auto;
+    }
+
+    .projects h3,
+    .projects h4 {
+        color: #fcde9c;
+    }
+
+    .projects .carousel {
+        width: 100vh;
+    }
+
+    .projects .card {
+        background-color: #ffa552;
+    }
+
+    .projects .button {
+        border-radius: 9999px;
+        height: 3rem;
+        width: 3rem;
+        border: none;
+        background-color: #381d2a;
+        color: white;
+    }
+
+    .projects .button:hover {
+        background-color: rgba(56, 29, 42, 0.9);
+    }
+
+    .projects .button svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: white;
+    }
+</style>
+
+
+
+<div class="projects" id="projects">
+    <h2>Projects</h2>
+    <Carousel.Root class="carousel"
+        opts={{
+            loop: true,
+        }}
+
+        plugins={[
+            Autoplay({
+                delay: 5000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+            }),
+        ]}>
+
+        <Carousel.Content>
+            <Carousel.Item>
+                <Card.Root class="card">
+                    <Card.Content>
+                        <a href={shape_url} target="_blank"><img src={shape} alt="shape"></a>
+                        <h3>Shape</h3>
+                        <h4>A Google Forms-like web application for creating and sharing surveys</h4>
+                    </Card.Content>
+                </Card.Root>
+            </Carousel.Item>
+
+            <Carousel.Item>
+                <Card.Root class="card">
+                    <Card.Content>
+                        <a href={mpp_url} target="_blank"><img src={mpp} alt="mpp"></a>
+                        <h3>MusicPlayerPy</h3>
+                        <h4>Small Python project; Music player made using pygame and ctk</h4>
+                    </Card.Content>
+                </Card.Root>
+            </Carousel.Item>
+
+            <Carousel.Item>
+                <Card.Root class="card">
+                    <Card.Content>
+                        <a href={dg_url} target="_blank"><img src={dg} alt="dg"></a>
+                        <h3>Dionysus Games</h3>
+                        <h4>Indie game development studio I co funded with <a href={dr_url} target="_blank">DOminikRogic</a></h4>
+                    </Card.Content>
+                </Card.Root>
+            </Carousel.Item>
+        </Carousel.Content>
+        <Carousel.Previous  class="button -left-20"/>
+        <Carousel.Next class="button -right-20"/>
+    </Carousel.Root>
+</div>

@@ -1,0 +1,14 @@
+@import "@fontsource/fusion-pixel-12px-monospaced-tc/index.css";
+
+:root {
+    --font-main: "Fusion Pixel 12px Monospaced TC", monospace;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: #fed681;
+    min-height: 100%;
+    display: flex;
+    margin: 10%;
+    flex-direction: column;
+}
