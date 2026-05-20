@@ -30,12 +30,6 @@
         min-width: 0;
     }
 
-    .hero h3,
-    .hero p,
-    .hero li {
-        color: #ffa552;
-    }
-
     .hero-header {
         background-color: #ffa552;
         border-radius: 1rem;
